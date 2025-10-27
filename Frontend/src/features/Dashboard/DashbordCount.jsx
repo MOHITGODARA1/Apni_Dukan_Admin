@@ -21,7 +21,7 @@ function DashboardCount() {
   useEffect(()=>{
     async function  fetchCount() {
        const response=await axios.get(
-        `${API_BASE_URL}/list/Product-Count`)
+        `${API_BASE_URL}/Product-Count`)
         setcount(response.data.count)
     }
     fetchCount();

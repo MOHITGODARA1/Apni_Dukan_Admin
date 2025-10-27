@@ -21,7 +21,7 @@ function Products() {
     async function fetchProducts() {
       try {
         setLoading(true);
-        const response = await axios.get(`${API_BASE_URL}/list/Product-get`);
+        const response = await axios.get(`${API_BASE_URL}/Product-get`);
         const data = response.data?.Products || [];
         setProducts(data);
         setFilteredProducts(data);
