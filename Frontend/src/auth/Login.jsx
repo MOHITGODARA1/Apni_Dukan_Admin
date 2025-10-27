@@ -6,7 +6,7 @@ function Login() {
   const [Password, setPassword] = useState("");
   const [error, setError] = useState("");
   const Navigate = useNavigate();
-
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   async function handleLogin(e) {
     e.preventDefault();
     if (!MobileNumber || !Password) {
@@ -20,7 +20,7 @@ function Login() {
         Password
       }
       const response=await axios.post(
-        "http://localhost:4000/api/v1/list/User-Login"
+        `${API_BASE_URL}/User-Login`
       ,data,
       {
         headers:{
