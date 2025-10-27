@@ -7,7 +7,7 @@ import cors from "cors";
 
 const PORT = process.env.PORT||5000;
 app.use(cors({
-  origin: ["https://apni-dukan-admin-omega.vercel.app",`http://localhost:${PORT}`],
+  origin: ["https://apni-dukan-admin-omega.vercel.app","https://apnidukan-admin.onrender.com",`http://localhost:${PORT}`],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

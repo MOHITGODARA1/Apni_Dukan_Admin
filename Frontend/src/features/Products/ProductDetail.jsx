@@ -20,7 +20,7 @@ function ProductDetail() {
       }
     }
     fetchProduct();
-  }, [id]);
+  }, [API_BASE_URL,id]);
 
   if (loading) {
     return (
