@@ -7,11 +7,11 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const response = await axios.get(`http://localhost:4000/api/v1/list/Product-get/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/Product-get/${id}`);
         setProduct(response.data.product); 
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -49,7 +49,6 @@ function ProductDetail() {
     );
   }
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   async function handeldelet(id) {
     if (!window.confirm("Are you sure you want to delete this product?")) {
