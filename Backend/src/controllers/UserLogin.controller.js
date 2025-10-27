@@ -17,7 +17,7 @@ const Check=async (req,res)=>{
       process.env.MOBILE_NUMBER !== MobileNumber ||
       process.env.PASSWORD !== Password
     ) {
-      return res.status(402).json({
+      return res.status(401).json({
         success: false,
         message: "Invalid credentials",
       });
